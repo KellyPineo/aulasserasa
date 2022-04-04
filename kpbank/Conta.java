@@ -4,8 +4,8 @@ package kpbank;
 		//atributos
 		private int agencia;
 		private int numeroConta;
-		private double saldo;
-		private String titular;
+		protected double saldo;
+		private PessoaHeranca titular;
 
 	
 		//construtores
@@ -13,7 +13,7 @@ package kpbank;
 		
 		}
 
-		public Conta(int agencia, int numeroConta, String titular) { //sobrecarregado
+		public Conta(int agencia, int numeroConta, PessoaHeranca titular) { //sobrecarregado
 			super();
 			this.agencia = agencia;
 			this.numeroConta = numeroConta;
@@ -34,7 +34,7 @@ package kpbank;
 //metodo sacar 
 		
 		public boolean sacar(double valor) {
-		 if(valor >0&& saldo >= valor ){
+		 if(valor >0&& saldo >= valor){
 			saldo -= valor;
 			return true;
 	 }
@@ -75,11 +75,11 @@ package kpbank;
 			return saldo;
 		}
 
-		public String getTitular() {
+		public PessoaHeranca getTitular() {
 			return titular;
 		}
 
-		public void setTitular(String titular) {
+		public void setTitular(PessoaHeranca titular) {
 			this.titular = titular;
 		}
 

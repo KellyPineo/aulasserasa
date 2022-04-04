@@ -33,7 +33,7 @@ public class Pessoa {
 		this.rg = rg;
 	}
 	
-	
+	//Encapsulamentos
 	public String getNome() {//exibe os objetos
 		return nome;
 	}
